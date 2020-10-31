@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%- include('partials/head'); %>  
+    <title>Ubicacion</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheets" href="/stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: rgb(22, 22, 73);
+    }
+  </style>
+    
+  </head> 
+
+  <body>
+    <%- include('partials/navbar'); %>
+      <div id="map-template"></div>
+
+      <div id="datTienda" class="container-content">
+        <p>Si aparte de mi contenido quisieras comprar algo de mi mercancía, <br>
+          con gusto te espero en mi tienda física y será 
+          un placer atenderte.<br>
+          Por el momento solo hago entregas locales.<br>
+          Disponibilidad en un horario de 15:00-19:00<br>
+          Abierto los días Jueves, Sábado y Domingo.<br>
+          Ubicada en la calle Vicente Guerreo Col. Insurgentes #6°A
+        </p>
+      </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    <script src="/javascripts/main.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+
+  <footer>
+    <%- include('partials/footer'); %>
+  </footer>
+</html>

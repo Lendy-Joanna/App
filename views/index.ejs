@@ -2,23 +2,68 @@
 <html>
 
   <head>
-  <%- include('partials/head'); %>  
-   
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheets" href="/public/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+  <%- include('partials/head'); %>   
 </head>
 
   <body>
     <%- include('partials/navbar'); %>
+    <br><br>
+    <div id="demo" class="carousel slide" data-ride="carousel" style="padding-left: 25%;">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/lofi.gif" alt="Música-lofi" style="width: 600px; height: 400px;">
+          <div class="carousel-caption">
+            <h3>Música</h3>
+            <p>Nueva lista actualizada para pasarla chill en Spotify</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/pelis.gif" alt="Pelis-varias" style="width: 600px; height: 400px;">
+          <div class="carousel-caption">
+            <h3 style="color: black;font-weight: bold;">Lo más nuevo</h3>
+            <p style="color: rgb(184, 147, 147);">Ésta semana analizando lo más nuevo del cine</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/clasicas.gif" alt="Pelis-accion" style="width: 600px; height: 400px;">
+          <div class="carousel-caption">
+            <h3>Nueva sección</h3>
+            <p>Analizando películas malas que fueron un bom</p>
+          </div>
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div> 
+<br><br>
 
-    <div class="jumbotron">
-      <h1 class="display-4">Bienvenido a NodeJS & Express</h1>
-      <img src="/images/node.jpg" width="400" height="200"/>
-      <p class="lead">Este es un ejemplo básico</p>
-      <hr class="my-4">
-      <p>Mi primer sitio básico con Express. </p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
-
-    <%- include('partials/footer'); %>
+    <div></div>
+    <div></div>
+    <div></div>
+  
   </body>
-
+  <footer>
+    <%- include('partials/footer'); %>
+  </footer>
 </html>

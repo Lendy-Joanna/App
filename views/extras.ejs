@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Extras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheets" href="/public/stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+   
+
+    <%- include('partials/head'); %>      
+</head>
+<body>
+  <%- include('partials/navbar'); %>
+  <br> <br>
+  <div class="container" style="width: 30%; height: 15%; background-color: rgba(193, 69, 224, 0.507);color:white; padding:5px 5px 5px 5px;">
+  <h4>Escucha varias de mis listas de música mientras trabajas, cocinas, entrenas, etc.</h4>
+  </div> <br> <br> <br>
+
+  <iframe src="https://open.spotify.com/embed/playlist/2OMKxAji8qfMILN0nAmo9H" 
+  width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="margin-left: 10px;"></iframe>
+
+  <iframe src="https://open.spotify.com/embed/playlist/06HAtmt0zDQJr9Ps4E07iV"
+   width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="margin-left:10px;"></iframe>
+
+   <iframe src="https://open.spotify.com/embed/playlist/5JZJOSyuwNnyRBeGCfjThD" 
+   width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="margin-left:10px;"></iframe><br> <br>
+
+   <br><br>
+   <div class="container" style="width: 30%; height: 15%; background-color: rgba(29, 143, 14, 0.438);color:white; padding:5px 5px 5px 5px;">
+    <h6>También puedes buscar alguna canción y recomendarla</h6>
+    </div><br><br>
+
+    <div class="container">        
+        <form action="">
+            <input type="hidden" id='hidden_token'>
+            <div class="col-sm-6 form-group row mt-4 px-0">
+                <label for="Genre" class="form-label col-sm-2" style="color: white;">Genre:</label>
+                <select name="" id="select_genre" class="form-control form-control-sm col-sm-10">
+                    <option>Select...</option>                    
+                </select>
+            </div>
+            <div class="col-sm-6 form-group row px-0">
+                <label for="Genre" class="form-label col-sm-2" style="color: white;">Playlists:</label>
+                <select name="" id="select_playlist" class="form-control form-control-sm col-sm-10">
+                    <option>Select...</option>                    
+                </select>
+            </div>                  
+            <div class="col-sm-6 row form-group px-0">
+                <button type="submit" id="btn_submit" class="btn btn-success col-sm-12">Search</button>
+            </div>          
+        </form>        
+        <div class="row">
+            <div class="col-sm-6 px-0">
+                <div class="list-group song-list">
+                    
+                </div>                                             
+            </div>
+            <div class="offset-md-1 col-sm-4" id="song-detail">                
+            </div>
+        </div>   
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/javascripts/appextra.js"></script>
+</body>
+<footer>
+  <%- include('partials/footer'); %>
+</footer>
+</html>

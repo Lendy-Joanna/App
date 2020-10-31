@@ -4,31 +4,18 @@
   <head>
     <%- include('partials/head'); %>  
     <title>Acerca de</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheets" href="/public/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <style>
       body{
         font-size: 14px;
         text-align: justify;
         background-color: rgb(22, 22, 73);
-      }
-      h1{
-        color:rgb(48, 172, 135);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
-      body p{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: cornsilk;
-        text-align: justify;
-        padding: 2px;
-      }
-      ul li{
-        padding: 3px;
-        color: moccasin;
-      }
-      footer p{
-       font-style: italic;
-       font-size: medium;
-       color: honeydew;
-       text-align: center;
       }
     </style>
   </head> 
@@ -38,20 +25,78 @@
 
     <div class="jumbotron">
       <h1 class="display-4">Acerca de: Lendy Joanna S.R</h1>
-      <img src="/images/perfil.jpg" width="200" height="300"/> 
+      <img src="/images/perfil.jpg" class="img-thumbnail" width="140" height="240"/> 
+      <div class="container" id="datosYo">
+        <p class="lead" style="color:black; font-weight: bold;">¡¡Es un gusto saludarte!! Soy Lendy, soy estudiante de la UTNG del grupo GDS0241 y estoy desarrollando una práctica para mi aprendizaje en el desarrollo de API's</p>
+      </div>
     </div>
-      <p class="lead">¡¡Es un gusto saludarte!! Soy Lendy, soy estudiante de la UTNG del grupo GDS0241 y estoy desarrollando una práctica para mi aprendizaje en el desarrollo de API's</p>
-      <hr class="my-4">
-      <p>Aparte de mi gusto por la programación, me encantan hacer las siguientes cosas: </p>
-      <br>
-      <ul class="list-group">
-        <li>Prácticar natación, especialmente de crol</li>
-        <li>Ir a crossfit y trabajar a veces con peso muerto</li>
-        <li>Jugar videojuegos en mi tiempo libre</li>
-        <li>Ver series, películas y anime</li>
-        <li>Leer libros de misterio, terror, suspenso, drama y ficción</li>
-      </ul>
-      <br>
+
+    <div id="masdatos" class="container">
+      <p style="color: rgb(55, 42, 104);">Aparte de mi gusto por la programación, me encantan hacer las siguientes cosas: </p><br>
+     
+      <div id="accordion">
+
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Practicar natación
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              De entre todos los estilos que hay en natación el que más me gusta es el de crol.
+        Este estilo es una forma alternada mientras uno de los brazos se mueve en el aire y el otro avanza bajo el agua.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              Practicar crossfit
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Es un sistema de entrenamiento que me gusta mucho porque se trabaja con peso y se acondiciona a partir de muchos tipos de ejercicios además de que me ayuda a mantener una buena disciplina.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              Ver series, películas y anime
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Entre mis ratos libres me gusta ver algunas series especialmente de acción o misterio 
+              como por ejemplo The Blacklist, de películas me gustan de misterio, fantasía, psicológico o comedia como la 
+              de El laberinto del fauno o la de Mejor...Imposible.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              Leer libros
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              También cuando puedo me gusta pasar un rato tranquilo leyendo diferentes géneros como la literatura de ficción realista,
+              culta, fantasía o algún tipo de novela como por ejemplo de algunos libros que me gustan mucho son:
+              La música del silencio, Asesinato:el doble crimen de los Flores Muñoz, Lista de locos y otros alfabetos,
+              El temor del hombre sabio, El psicoanalista y El código Da Vinci.
+            </div>
+          </div>
+        </div>
+      </div><br>
+      
+    </div>
+    
       <a class="btn btn-primary btn-lg" href="#" role="button">Saber más...</a>
       <br><br>
   </body>

@@ -1,31 +1,46 @@
 <!-- views/partials/navbar.ejs -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Site</a>
+    <a class="navbar-brand" href="#">Zona Cero</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent" aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-    <a class="nav-link" href="#">Home <span class="sronly">(
-        current)</span></a>
+    <a class="nav-link" href="/">Inicio<span class="sronly"></span></a>
     </li>
     <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    API´s
+    Más opciones
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="#">Geolocalización</a>
-    <a class="dropdown-item" href="#">Redes sociales</a>
-    <a class="dropdown-item" href="#">Ecommerce</a>
-    <a class="dropdown-item" href="#">Streaming</a>
+    <a class="dropdown-item" href="/streaming">Mi Streaming</a>
+    <a class="dropdown-item" href="/extras">Extras</a>
     <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Otra</a>
+    <a class="dropdown-item">Suscripción para contenido exclusivo
+        <form action="checkout" method="POST">
+            <script 
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_51HhtYfIoCf79dHKpC5WgrxisgCedBtJ724qUkI4Gnsg0yFG6gp6hgW29gwN5tCidk8x1ca7SQI5X10sLxM9bCEce00ogSIUUdI"
+            data-amount="472"
+            data-name="Zona Cero"
+            data-description="Contenido especial para suscriptores"
+            data-image="/images/logo.jpg"
+            data-locale="auto">
+          </script>
+          </form>
+    </a>
     </div>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="/acercade">Acerca de</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/ubicacion">Dónde encontrarme</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/login">Registro</a>
     </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
