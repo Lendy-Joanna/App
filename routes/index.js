@@ -31,7 +31,7 @@ router.get('/extras', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login', {page:'login', menuId:'login'});
+  res.render('signup', {page:'signup', menuId:'signup'});
 });
 
 router.post('/checkout', async (req, res)=>{

@@ -2,55 +2,54 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Register</title>
-        <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/stylesheets/styleindex.css">
-        <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
-  
+        <title>Registro</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheets" href="/public/stylesheets/style.css">
+
+        <style>
+          body {
+              padding: 50px;
+              font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+              text-align: justify;
+              background-color: rgb(22, 22, 73);
+            }
           
+        </style>
     </head>
+    
     <body class="signup">
-        <%- include('../partials/message'); %>
-        <div class="login-boxs">
-            <img class="avatar" src="/images/img3.jpg" alt="Logo">
-           
-            <form action="/users/signup" method="POST">
-                <!--USERNAME-->
-                <label for="username">Username</label>
-                <input type="text" placeholder="username"  id="username" name="username">
-                <!--email-->
-                <label for="email">Email</label>
-                <input type="email" placeholder="@email"  id="email" name="email">
-                <!--NAME-->
-                <label for="nombre">Nombre</label>
-                <input type="text" placeholder="nombre"  id="nombre" name="nombre">
-              
-                <!--edad-->
-                <label for="edad">Edad</label>
-                <input type="number" placeholder="edad"  id="edad" name="edad">
-
-               <!--PASSWORD-->
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter Password"  id="password" name="password">
-                <!--Tipo de cuenta-->
-                <label for="cuenta">Tipo Cuenta:</label>
-                <div class="select">
-                <select class=""  id="Tipocuenta" name="Tipocuenta" >
-                    <option selected disabled>Seleccione el tipo de cuenta</option>
-                    <option value=1>Premium</option>
-                 <option value=2>Gratis</option>
-             </select>
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+              <div class="card">
+                <div class="card-header">
+                  Account Register 
+                </div>
+                <div class="card-body">
+                  <form action="/users/signup" method="POST">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+                    </div>
+                    <button class="btn btn-primary btn-block">
+                      Signup 
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
-                <!--SUBMIT-->
-                <input type="submit" value="Enviar">
-
-                
-                <a href="/login">Ya tienes una cuenta?</a>
-                
-            </form>
-        </div>
-        <%- include('../partials/script'); %>    
+          </div>
     </body>
-   
+
+    <footer>
+      <%- include('partials/footer'); %>
+    </footer>
    
 </html>
